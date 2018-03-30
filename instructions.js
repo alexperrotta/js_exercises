@@ -41,6 +41,10 @@ bad -> 10%
 20
 > tipAmount(40, 'fair')
 6
+
+
+
+
 Tip Calculator 2
 Write a function totalAmount that takes the same arguments as tipAmount except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
 
@@ -48,6 +52,9 @@ Write a function totalAmount that takes the same arguments as tipAmount except i
 120
 > totalAmount(40, 'fair')
 46
+
+
+
 Tip Calculator 3
 Write a function splitAmount that takes the bill amount and the level of service, and the number of people to split the bill between. It will return the final amount for each person.
 
@@ -95,10 +102,16 @@ Write a function printBanner which is given some text and prints a banner with a
 ****************************
 * Welcome to DigitalCrafts *
 ****************************
+
+
+
 Factor a Number
 Write a function factors which is given a number and returns an array containing all its factors. What are factors?
 
 https://www.khanacademy.org/math/pre-algebra/factors-multiples/divisibility-and-factors/v/finding-factors-of-a-number
+
+
+
 
 Caesar Cipher
 Write a function cipher which is given a string, an offset, and returns the Caesar cipher of the string.
@@ -166,6 +179,9 @@ Write a function rockPaperScissors which takes the throw of player 1 and the thr
 'player 2'
 > rockPaperScissors('paper', 'paper')
 'draw'
+
+
+
 Tic Tac Toe
 Write a function ticTacToe which takes a two-dimensional array of size 3x3. Each cell in the two dimensional array can be one of 'O', 'X', or null. The ticTacToe function will determine the winner by
 
