@@ -105,6 +105,39 @@ totalAmount(100, "good");
 
 
 
+/* Tip Calculator 3
+Write a function splitAmount that takes the bill amount and the level of service, and the number of people to split the bill between. It will return the final amount for each person.
+
+> splitAmount(100, 'good', 5)
+24
+> splitAmount(40, 'fair', 2)
+23
+Print Numbers */
+
+function splitAmount(amount, service, people) {
+  function tipAmount(amount, service) {
+    if (service == "bad") {
+      return 0.1 * amount; 
+    } else if (service == "fair") {
+      return 0.15 * amount; ;
+    } else if (service == "good") {
+      return 0.2 * amount; ;
+    }
+
+  }
+  
+  var tip = tipAmount(100, "good");
+  var amount = amount;
+}
+
+var final = (tipAmount + amount) / people
+splitAmount(100, "good", 2);
+
+
+
+
+
+
 
 
 
@@ -127,6 +160,44 @@ function factors(number) {
 }
 // Call the function
 console.log(factors(24));
+
+
+
+
+
+/* Rock Paper Scissors
+Write a function rockPaperScissors which takes the throw of player 1 and the throw of player 2. A throw can have the values of 'rock', 'paper', or 'scissors'. It will return 'player 1' if player 1 wins, 'player 2' if player 2 wins, and 'draw' if there is no winner.
+
+> rockPaperScissors('rock', 'scissors')
+'player 1'
+> rockPaperScissors('rock', 'paper')
+'player 2'
+> rockPaperScissors('paper', 'paper')
+'draw'  */
+
+function rockPaperScissors(throw1, throw2) {
+  if (throw1 === 'rock' && throw2 === 'scissors') {
+    return 'player 1'; 
+  } else if (throw1 === 'scissors' && throw2 === 'paper') {
+    return 'player 1';
+  } else if (throw1 === 'paper' && throw2 === 'rock') {
+    return 'player 1';
+  } else if (throw2 === 'rock' && throw1 === 'scissors') {
+    return 'player 2'; 
+  } else if (throw2 === 'scissors' && throw1 === 'paper') {
+    return 'player 2';
+  } else if (throw2 === 'paper' && throw1 === 'rock') {
+    return 'player 2';
+  } else if (throw1 === throw2) {
+    return 'draw';
+  }
+}
+
+rockPaperScissors('scissors', 'scissors');
+
+
+
+
 
 
 
