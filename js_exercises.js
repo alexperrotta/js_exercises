@@ -83,6 +83,31 @@ var tip = tipAmount(100, "good");
 console.log(tip);
 
 
+
+/* Tip Calculator 2
+Write a function totalAmount that takes the same arguments as tipAmount except it returns the total as the tip amount plus the bill amount. This function may make use of tipAmount as a sub-task.
+
+> totalAmount(100, 'good')
+120
+> totalAmount(40, 'fair')
+46 */
+
+function totalAmount(amount, service) {
+  if (service == "bad") {
+    return (0.1 * amount) + amount; 
+  } else if (service == "fair") {
+    return (0.15 * amount) + amount;
+  } else if (service == "good") {
+    return (0.2 * amount) + amount;
+  }
+}
+totalAmount(100, "good");
+
+
+
+
+
+
 /* Factor a Number
 Write a function factors which is given a number and returns an array containing all its factors. */
 

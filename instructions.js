@@ -63,6 +63,10 @@ Write a function splitAmount that takes the bill amount and the level of service
 > splitAmount(40, 'fair', 2)
 23
 Print Numbers
+
+
+
+
 Write a function printNumbers which is given a start number and an end number. It will print the numbers from one to the other, one per line:
 
 > printNumbers(1, 10)
