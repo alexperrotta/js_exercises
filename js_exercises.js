@@ -32,6 +32,27 @@ function hello(name) {
 
 
 
+
+  /* Madlib
+  Write a madlib function, which is given a name and a subject. It will return(not print) a new string: (name)'s favorite subject in school is (subject).
+  
+  Example:
+  
+  > madlib('Anushka', 'art');
+  'Anushka's favorite subject in school is art.' */
+
+function madlib(name, subject) {
+  var sentence = name + " 's favorite subject in school is " + subject + ".";
+  return sentence;
+}
+
+madlib("Harry", "coding");
+  
+
+
+
+
+
   /* Tip Calculator
 Write a function tipAmount that is given the bill amount and the level of service (one of good, fair and poor) and returns the dollar amount for the tip. Based on:
 
