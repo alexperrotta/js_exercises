@@ -813,9 +813,36 @@ lowestLow();
 
 
 /* Write a function that produces an array of objects. Each object should include 
-the date, the open, and the close.
+the date, the open, and the close. */
 
 
+function arrayOfObjects() {
+    var days = Object.keys(stocks);
+    var array = [];
+
+    days.forEach(function(currentDay) {
+        var statsForAGivenDay = stocks(currentDay);
+        var currentDateOpenClose = {      // this will be an object
+            date: currentDay,
+            open: statsForAGivenDay["1. open"],
+            close: statsForAGivenDay["4. close"]
+        };  
+ 
+        array.push(currentDateOpenClose);
+
+    });
+
+    return array;
+}
+
+console.log(arrayOfObjects());
+
+
+
+
+
+
+/* 
 var days = Object.keys(stocks); We are referring to the Object type, 
 we're reaching into the keys property of Object
 keys is a function - keys will spit out an array for every single object you pass in
