@@ -703,6 +703,7 @@ var stocks = {
         }
     }
 
+// multi-dimensional object
 
 /*  Write functions to get the averages for the "open", "high", "low", and "close" 
 values for all days. */
@@ -711,21 +712,23 @@ function averageOpen() {
     // loop through each array at index 0 and add it to an empty array (open), 
     // then reduce sumOfOpen to get the sum
     // then divide it by the length of the array
-    var open = [];
-    for (var i=0; i<stocks.length ; i++) {
-        open = stocks[key];
-        open.push(i);
-        return open;
+    var sum = 0;
+    var days = Object.keys(stocks); // this will give you an array of the days
+    for (var i=0; i<days.length ; i++) {
+        var currentDay = days[i];
+        var statsForAGivenDay = stocks[currentDay];
+
+        var openValue = parseFloat(statsForAGivenDay["1. open"]); // make sure this is an integer and not a string
+        sum = sum + openValue;
     }
-    // var sumOfOpen = reduce(open) / open.length;
-    // return sumOfOpen;
+    var average = sum / days.length;
+    return average;
 }
 averageOpen();
 
-/* 
-var index = Data.map(function(e) { return e.name; })
-.indexOf('Nick');
-*/
+// Note - can't use .length on an object, it has to be an array
+// Objects don't have an order like an array does
+
 
 
 
@@ -764,7 +767,8 @@ lowestLow();
 the date, the open, and the close.
 
 
-var days = Object.keys(stocks);
+var days = Object.keys(stocks); We are referring to the Object type, we're reaching into the keys property of Object
+keys is a function - keys will spit out an array for every single object you pass in
 days.forEach(function (day) {
   console.log(stocks[day]);
 });
