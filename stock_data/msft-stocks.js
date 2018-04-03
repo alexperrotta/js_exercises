@@ -713,7 +713,7 @@ function averageOpen() {
     // then divide it by the length of the array
     var open = [];
     for (var i=0; i<stocks.length ; i++) {
-        open = stocks[0];
+        open = stocks[key];
         open.push(i);
         return open;
     }
@@ -722,16 +722,39 @@ function averageOpen() {
 }
 averageOpen();
 
+/* 
+var index = Data.map(function(e) { return e.name; })
+.indexOf('Nick');
+*/
+
+
 
 
 // Write a function to find the highest "high" for all days.
+// Math.max()
 
+function highestHigh() {
+    var highest = Math.max(stocks[0]);
+    return highest;
+}
+
+highestHigh();
 
 
 
 
 
 // Write a function to find the lowest "low' for all days.
+// Math.min()
+
+function lowestLow() {
+    var lowest = Math.min(stocks[0]);
+    return lowest;
+}
+
+lowestLow();
+
+
 
 
 
