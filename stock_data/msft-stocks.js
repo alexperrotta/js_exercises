@@ -708,6 +708,8 @@ var stocks = {
 /*  Write functions to get the averages for the "open", "high", "low", and "close" 
 values for all days. */
 
+// This function only works for 1. open
+
 function averageOpen() {
     // loop through each array at index 0 and add it to an empty array (open), 
     // then reduce sumOfOpen to get the sum
@@ -715,7 +717,7 @@ function averageOpen() {
     var sum = 0;
     var days = Object.keys(stocks); // this will give you an array of the days
     for (var i=0; i<days.length ; i++) {
-        var currentDay = days[i];
+        var currentDay = days[i]; // IMPORTANT
         var statsForAGivenDay = stocks[currentDay];
 
         var openValue = parseFloat(statsForAGivenDay["1. open"]); // make sure this is an integer and not a string
@@ -728,6 +730,53 @@ averageOpen();
 
 // Note - can't use .length on an object, it has to be an array
 // Objects don't have an order like an array does
+
+
+/* This function below can be used for any value, notice the parameter,
+    that way you don't have to create a separate function for each value 
+    Turn everything that needs to be specific into a parameter
+    */
+
+var average(valueOfInterest) {
+    var sum=;
+    var days = Objects.keys(stocks);
+    for (var i=0; i<days.length ; i++) {
+        var currentDay = days[i];
+        var statsForAGivenDay = stocks[currentDay];
+        
+        var value = parseFloat(statsForAGivenDay[valueOfInterest]);
+        
+        sum = sum + value;
+    }
+    var average = sum / days.length;
+    return average;
+}
+
+average("1. open"); // we are passing in the string 1. open
+average("2. high");
+
+
+// or
+
+var average(valueOfInterest) {
+    var sum=;
+    var days = Objects.keys(stocks);
+    
+    days.forEach(function(currentDay) {  // forEach is a function, a fancy for loop
+        var statsForAGivenDay = stocks[currentDay];
+        var value = parseFloat(statsForAGivenDay[valueOfInterest]);
+        sum = sum + value;                        // we pass it a function and it creates the loop for us
+    })
+
+    var average = sum / days.length;
+    return average;
+}
+
+average("1. open"); // we are passing in the string 1. open
+average("2. high");
+
+
+
 
 
 
@@ -767,7 +816,8 @@ lowestLow();
 the date, the open, and the close.
 
 
-var days = Object.keys(stocks); We are referring to the Object type, we're reaching into the keys property of Object
+var days = Object.keys(stocks); We are referring to the Object type, 
+we're reaching into the keys property of Object
 keys is a function - keys will spit out an array for every single object you pass in
 days.forEach(function (day) {
   console.log(stocks[day]);
