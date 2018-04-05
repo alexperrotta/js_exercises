@@ -241,3 +241,28 @@ function ticTacToe(board) {
 
 
 console.log(ticTacToe(testBoard));
+
+
+
+
+// Anonymous functions 
+
+var add = function(num1, num2) {
+  return num1 + num2; 
+}
+
+var result = add(1, 2);
+
+
+var subtract = function(num1, num2) {
+  return num1 - num2; 
+}
+
+var result = subtract(1, 2);
+
+
+
+
+
+
+

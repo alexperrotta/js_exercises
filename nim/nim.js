@@ -9,7 +9,7 @@ On your turn, you can choose to remove 1, 2, or 3 rocks from the pile. After you
 your turn is over
 The winner is the player that takes the last rock from the pile  */
 
-var rocks = '* * * * * * * * * * * * * * * *';
+var rocks = {"*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*", "*",};
 
 var turn = 'player 1';
 
@@ -53,5 +53,13 @@ while (checkVictory() == 'No one wins') {
 }
 
 
+/* Notes from class:
 
+var isPlayerOnesTurn = true;
+
+var pebbles = 16; // easier to do the math
+
+
+
+*/
 
