@@ -14,7 +14,7 @@ var rocks = '* * * * * * * * * * * * * * * *';
 var turn = 'player 1';
 
 function printRocks() {
-	console.log(rocks);
+	console.log("Here's how many rocks there are: "+ rocks);
 }
 
 
@@ -22,22 +22,34 @@ function takeRocks() {
 	var playerPrompt = parseInt(prompt('How many rocks do you want to take? You can only take 1, 2, or 3 rocks from the pile.'));
 
 	if (playerPrompt === '1') {
-		;
+		rocks = rocks.pop();
 	} else if (playerPrompt === '2') {
-		;
+		rocks = rocks.pop(2);
 	} else if (playerPrompt === '3') {
-		;
+		rocks = rocks.pop(3);
 	} 
-	
-	console.log(printRocks());
+	printRocks();
+	turn = 'player 2';
 }
 
 takeRocks();
 
 
 
-function checkVictory() {
 
+function checkVictory() {
+	if (turn === 'player 1' && rocks === '*') {
+		console.log('Player 1 wins!');
+	} else if (turn === 'player 2' && rocks === '*') {
+		console.log('Player 2 wins!');
+	} else {
+		console.log('No one wins');
+	}
+
+}
+
+while (checkVictory() == 'No one wins') {
+	takeRocks();
 }
 
 
