@@ -265,4 +265,37 @@ var result = subtract(1, 2);
 
 
 
+var calculate = function(num1, num2, operation) {
+  if (operation = "add") {
+    return num1 + num2;
+  } else if (operation = "subtract") {
+    return num1 - num2;
+  }
+}
+
+// do this instead - callback
+
+var calculate = function(num1, num2, operation) {
+  return operation(num1, num2);
+}
+
+calculate(1, 2, add); // when we pass in add, it's calling the add function from above
+
+// this is helpful when you use other people's code, you import their library/code and add it to your html file
+
+
+
+
+var array = {1, 2, 3};
+
+var newArray = array.map(function(currentValue, index, array){
+  return currentValue * 3; // multiply every element by 3
+});  // .map assigns the array to a new array
+
+console.log(array);
+console.log(newArray);
+
+
+
+
 
