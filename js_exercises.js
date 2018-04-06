@@ -286,7 +286,7 @@ calculate(1, 2, add); // when we pass in add, it's calling the add function from
 
 
 
-var array = {1, 2, 3};
+var array = [1, 2, 3];
 
 var newArray = array.map(function(currentValue, index, array){
   return currentValue * 3; // multiply every element by 3
