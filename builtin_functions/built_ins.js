@@ -67,18 +67,83 @@ console.log(coolCities);
 Write a function which takes an array of city objects like the above problem as input and 
 returns an array of the cities names. */
 
-var cities = [
+ var cities = [
   { name: 'Los Angeles', temperature: 60.0},
   { name: 'Atlanta', temperature: 52.0 },
   { name: 'Detroit', temperature: 48.0 },
   { name: 'New York', temperature: 80.0 }
 ];
 
-var namesOfCities = cities.forEach(function(element){
-	return element.keys(0);
+var namesOfCities = cities.forEach(function(name){
+	return cities.name;
 });
 
-console.log(namesOfCities);
+console.log(namesOfCities); 
+
+
+
+
+/*
+Good Job!
+Given an array of people's names:
+
+Print out 'Good Job, {{name}}!' for each person's name, one on a line. */
+
+var people = [
+  'Dom',
+  'Lyn',
+  'Kirk',
+  'Autumn',
+  'Trista',
+  'Jesslyn',
+  'Kevin',
+  'John',
+  'Eli',
+  'Juan',
+  'Robert',
+  'Keyur',
+  'Jason',
+  'Che',
+  'Ben'
+];
+
+var goodJob = people.forEach(function(person){
+	console.log('Good job ' + person + '!');
+});
+
+
+
+/*
+Sort an array
+Given an array of strings such the array of names given in the previous problem, 
+sort them by alphabetically order. */
+
+var people = [
+  'Dom',
+  'Lyn',
+  'Kirk',
+  'Autumn',
+  'Trista',
+  'Jesslyn',
+  'Kevin',
+  'John',
+  'Eli',
+  'Juan',
+  'Robert',
+  'Keyur',
+  'Jason',
+  'Che',
+  'Ben'
+];
+
+var sortedNames = people.sort();
+
+console.log(sortedNames);
+
+
+
+
+
 
 
 /* Sort an array, 2
@@ -103,14 +168,29 @@ var people = [
 ];
 
 var sortedNames = people.sort(function(a, b){
-	return a.length- b.length;
+	return a.length - b.length;
 });
 
 console.log(sortedNames);
 
 
 
+/* Sort an array, 3
+Given an array of array of numbers like:
 
+var arr = [
+  [1, 3, 4],
+  [2, 4, 6, 8],
+  [3, 6]
+];
+Sort the array by the sum of each inner array. For the above example, 
+the respective sums for each inner array is 8, 20, and 9. Therefore, the solution should be:
+
+[
+  [1, 3, 4],
+  [3, 6],
+  [2, 4, 6, 8]
+]  */
 
 
 
