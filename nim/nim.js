@@ -28,8 +28,8 @@ function takeRocks() {
 		console.log('Invalid response. Try again.')
 	} */ 
 	switchPlayers();
-	console.log("It's " + turn + "'s turn.");
 	printRocks();
+	console.log("It's " + turn + "'s turn.");
 }
 
 
@@ -43,7 +43,6 @@ function switchPlayers() {
 
 function printRocks() {
 	console.log("Here's how many rocks there are: " + rocks);
-	console.log("It's " + turn + "'s turn.");
 }
 
 
@@ -54,13 +53,13 @@ while (rocks > 0) {
 
 function whoWins() {
 	if (turn === 'player 1' && rocks === 0) {
-		console.log('Player 1 wins!');
+		console.log('Player 2 wins!');
 	} else if (turn === 'player 2' && rocks === 0) {
 		console.log('Player 2 wins!');
 	} 
 }
   
-
+whoWins();
 
 
 /* Notes from class:
