@@ -249,7 +249,7 @@ the respective sums for each inner array is 8, 20, and 9. Therefore, the solutio
   [2, 4, 6, 8]
 ]  */
 
-
+/*
 arr.sort(function(a, b){
 // if the sum of a's numbers is less than the sume of b's numbers
 //  then a comes first. Return a negative number
@@ -275,7 +275,7 @@ console.log(arr);
 // version 2
 
 
-arr.sort(function(a, b){
+ arr.sort(function(a, b){
 
 	var sum = function(acc, item){
 		return acc + item;
@@ -287,7 +287,96 @@ arr.sort(function(a, b){
 
 })
 
-console.log(arr);
+console.log(arr); */
+
+
+
+
+
+/* 3 times
+Given this function:
+
+function call3Times(fun) {
+  fun();
+  fun();
+  fun();
+}
+Use the call3Times function to print "Hello, world!" 3 times. */
+
+function call3Times(str) {
+  return str.repeat(3);
+}
+
+console.log(call3Times('Hello world!'));
+
+
+
+
+
+/* n times
+You will write a function callNTimes that takes two arguments: times as a number, and fun as a function. 
+It will call that function for that many times. Example:
+
+> callNTimes(5, hello)
+Hello, world!
+Hello, world!
+Hello, world!
+Hello, world!
+Hello, world!
+You are allowed to use a loop in the implementation of callNTimes. */
+
+
+function callNTimes(times, string) {
+	if (times > 0) {
+		return string.repeat(times);	
+	} else {
+		return "";
+	}
+}
+
+console.log(callNTimes(5, 'hello '));
+
+
+
+
+
+/* Sum an array
+Write a function sum that takes an array of numbers as argument and returns the sum of those numbers. 
+Use the reduce method to do this.
+
+> sum([1, 2, 3])
+6 */
+
+
+
+function sum(numbers) {
+  return numbers.reduce(function(a,b) {
+    return a + b
+  });
+}
+
+console.log(sum([1, 2, 3]));
+
+
+/* Acronym
+Write a function acronym that takes an array of words as argument and returns the acronym of the words. 
+Use the reduce method to do this.
+
+> acronym(['very', 'important', 'person'])
+'VIP'
+> acronym(['national', 'aeronautics', 'space', 'administration'])
+'NASA'  */
+
+
+function acronym() {
+
+}
+
+console.log();
+
+
+
+
 
 
 
@@ -350,6 +439,31 @@ var result = map([1, 2, 3], function(item){
 })
 
 console.log(result);
+
+
+
+/* Bonus: Caesar Cipher
+Rewrite this cipher function without using a loop, using the help of array's map, join, and string's split method.
+
+function cipher(text) {
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+  var result = '';
+  for (var i = 0; i < text.length; i++) {
+    var chr = text[i];
+    var idx = alphabet.indexOf(chr.toUpperCase());
+    var newIdx = idx + 13;
+    if (newIdx >= alphabet.length) {
+      newIdx -= 26;
+    }
+    result += alphabet[newIdx];
+  }
+  return result;
+}
+
+// You can assume that the text is only one word, all letters are capitalized, and the offset is always 13
+var encrypted = cipher('GENIUS');
+
+console.log(encrypted);   */
 
 
 
