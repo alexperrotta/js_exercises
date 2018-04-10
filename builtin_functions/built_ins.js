@@ -368,11 +368,12 @@ Use the reduce method to do this.
 'NASA'  */
 
 
-function acronym() {
-
+function acronym(array) {
+	var newArray = ['very', 'important', 'person'];
+	return 
 }
 
-console.log();
+console.log(acronym(['very', 'important', 'person']));
 
 
 
@@ -444,6 +445,7 @@ console.log(result);
 
 /* Bonus: Caesar Cipher
 Rewrite this cipher function without using a loop, using the help of array's map, join, and string's split method.
+ */
 
 function cipher(text) {
   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
@@ -463,7 +465,7 @@ function cipher(text) {
 // You can assume that the text is only one word, all letters are capitalized, and the offset is always 13
 var encrypted = cipher('GENIUS');
 
-console.log(encrypted);   */
+console.log(encrypted);  
 
 
 
