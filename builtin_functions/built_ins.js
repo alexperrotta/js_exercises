@@ -445,7 +445,7 @@ console.log(result);
 
 /* Bonus: Caesar Cipher
 Rewrite this cipher function without using a loop, using the help of array's map, join, and string's split method.
- */
+ 
 
 function cipher(text) {
   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
@@ -465,7 +465,29 @@ function cipher(text) {
 // You can assume that the text is only one word, all letters are capitalized, and the offset is always 13
 var encrypted = cipher('GENIUS');
 
-console.log(encrypted);  
+console.log(encrypted);  */
 
+// in progress
 
+function cipher(text) {
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+  var result = '';
+  text.map(function(){
+
+    var chr = text[i];
+    var idx = alphabet.indexOf(chr.toUpperCase());
+    var newIdx = idx + 13;
+    if (newIdx >= alphabet.length) {
+      newIdx -= 26;
+    }
+    result += alphabet[newIdx];
+  }
+  return result;
+  });
+    
+}
+
+var encrypted = cipher('GENIUS');
+
+console.log(encrypted); 
 

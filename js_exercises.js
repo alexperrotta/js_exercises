@@ -290,7 +290,8 @@ Write a function decipher which is given a string, an offset, and returns the or
 
 /*
 Leetspeak
-Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string. To convert text to its leetspeak version, make the following substitutions:
+Write a function leetspeak which is given a string, and returns the leetspeak equivalent of the string. 
+To convert text to its leetspeak version, make the following substitutions:
 
 A => 4
 E => 3
@@ -364,7 +365,8 @@ Write a function matrixAdd which is given two two-dimensional arrays, and return
 
 /* 
 Matrix Multiplication
-Write a function matrixMultiply which is given two two-dimensional arrays - you can assume the matricies are of size 2x2. It will return the result of matrix multiplication between the two given matricies.
+Write a function matrixMultiply which is given two two-dimensional arrays - you can assume the 
+matricies are of size 2x2. It will return the result of matrix multiplication between the two given matricies.
 
 https://www.khanacademy.org/math/precalculus/precalc-matrices/multiplying-matrices-by-matrices/v/matrix-multiplication-intro
 
